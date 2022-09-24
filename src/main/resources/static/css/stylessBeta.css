@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: #171717;
+    color: #000;
+    line-height: 1.6;
+    position: relative;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+  }
+  .lines .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  .lines .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    -webkit-animation: run 7s 0s infinite;
+            animation: run 7s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  .lines .line:nth-child(1) {
+    margin-left: -25%;
+  }
+  .lines .line:nth-child(1)::after {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  .lines .line:nth-child(3) {
+    margin-left: 25%;
+  }
+  .lines .line:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+  }
+  
+  @-webkit-keyframes run {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+  
+  @keyframes run {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+
+  .logo{
+    
+    width: 366px;
+    height: 439px;
+    background-image: url("../imagenes/logoBeta_1mini.fw.png");
+    background-size: cover;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+
+.corner-button {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: .05rem;
+    cursor: pointer;
+    background: transparent;
+    border: 0.5rem solid currentColor;
+    padding: 1.5rem 2rem;
+    font-size: 2.2rem;
+    color: #18e4ff;
+    position: relative;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    width: 22%;
+    height: 0%;
+    
+    margin-left: 39%;
+    margin-top: 20px;
+  }
+  .corner-button:hover {
+    color: rgb(23, 0, 228);
+  }
+  .corner-button:hover::before {
+    width: 0;
+  }
+  .corner-button:hover::after {
+    height: 0;
+  }
+  .corner-button:active {
+    border-width: 0.25rem;
+  }
+  .corner-button span {
+    position: relative;
+    z-index: 2;
+  }
+  .corner-button::before, .corner-button::after {
+    content: '';
+    position: absolute;
+    background: #171717;
+    z-index: 1;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .corner-button::before {
+    width: calc(100% - 3rem);
+    height: calc(101% + 1rem);
+    top: -0.5rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .corner-button::after {
+    height: calc(100% - 3rem);
+    width: calc(101% + 1rem);
+    left: -0.5rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+

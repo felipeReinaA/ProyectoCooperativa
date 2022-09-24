@@ -1,0 +1,28 @@
+table{
+    background-color: rgb(2, 57, 129);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    width: 40%;
+    height: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+tr{
+    background-color: rgb(87, 120, 230);
+    height: 50px;
+}
+
+td{
+    background-color: rgb(207, 238, 243);
+    color: black;
+    padding: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+th{
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+
+}

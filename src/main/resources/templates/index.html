@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/styless.css}">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <title>Mi_Pagina</title>
+</head>
+
+<body>
+    <header class="contheader" id="contenca">
+        <div class="titulologo">
+            <h1 class="titulolop">Título</h1>
+            <div class="logo"></div>
+        </div>
+        <h1 class="titulolop">Título</h1>
+        <nav class="menu">
+            <ul>
+                <li class="lista"><a th:href="@{cliente}">Consulta clientes</a> </li>
+                <li class="lista"><a th:href="@{cliente/nuevo}">Registro clientes</a> </li>
+                <li class="lista"><a href="">Actualizar clientes</a> </li>
+                <li class="lista"><a href="#">link4</a> </li>
+                <li class="lista"><a href="#">link5</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div sec:authorize="!isAuthenticated()">
+        <a th:href="@{/oauth2/authorization/auth0}">Log In</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+        <a th:href="@{/cliente}">Ir a la aplicacion</a>
+    </div>
+
+    <main class="main">
+        <section class="secuno">
+               <article class="art1" id="artt1">
+                <h2>Subtitulo 1</h2>
+                 <img src="" alt="">
+                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque,
+                    eius
+                    aliquid quae fugit quidem ipsum, saepe necessitatibus tenetur eligendi unde, in culpa inventore
+                    corporis
+                    dolores nisi et autem odio voluptate.</p>
+                </article>
+                <article class="art1" id="artt2">
+                <h2>Subtitulo 2</h2>
+                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat alias aliquam, atque
+                    necessitatibus odio
+                    quis labore optio temporibus iusto placeat consequuntur aut, excepturi corporis quaerat porro? Ullam
+                    facilis
+                    quia similique.</p>
+                </article>
+            <article class="art1" id="artt3">
+                 <h2>Subtitulo 3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit consequatur nemo animi,
+                        incidunt laudantium corrupti quisquam iure natus tempora, porro, unde placeat consectetur
+                        assumenda quam accusamus perferendis quidem. Autem?</p>
+            </article>
+
+
+        </section>
+    </main>
+</body>
+
+</html>

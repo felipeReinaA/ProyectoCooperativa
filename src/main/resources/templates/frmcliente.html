@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/stylessfrm.css}">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset class="fi">
+
+    <legend>Registrar cliente</legend>
+
+    <form th:action="@{/cliente/guardar}"th:object="${clienteinsertar}"method="POST" class="frm">
+
+    <label for="doc">Documento
+    <input type="text" id="doc" required th:field="*{documento}">
+    </label>
+
+    <label for="nom">Nombre
+    <input type="text" id="nom" th:field="*{nombre}">
+    </label>
+
+    <label for="ape">Apellido
+    <input type="text" id="ape" th:field="*{apellido}">
+    </label>
+
+    <label for="cor">Correo
+    <input type="email" id="cor" th:field="*{correo}">
+    </label>
+
+    <label for="cel">Celular
+    <input type="text" id="cel" th:field="*{celular}">
+    </label>
+
+
+
+<input class="boton" type="submit" value="Registrar">
+
+        <a th:href="@{'/'}"> <button> index </button> </a>
+</form>
+</fieldset>
+
+
+</body>
+</html>

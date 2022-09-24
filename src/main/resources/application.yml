@@ -1,0 +1,17 @@
+# src/main/resources/application.yml
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: BglxuiILUVzS2AwqrmfAQA295YWUCOTq
+            client-secret: toZ2HwrlSwafHO6no675NPPM8tW6OV4fWIQDYb3cbX2HvAV6ltBTtl1wHI82GSVh
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          auth0:
+            # trailing slash is important!
+            issuer-uri: https://dev-cpvclteg.us.auth0.com/
