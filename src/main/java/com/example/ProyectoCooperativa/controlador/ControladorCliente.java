@@ -32,9 +32,9 @@ public class ControladorCliente {
     @GetMapping("/")
     public String inicio(Model model, @AuthenticationPrincipal OidcUser principal) {
         if(principal!=null) {
-            Usuario usuario=this.servivoUsuario.obtenerUsuario(principal.getClaims())
+            Usuario usuario=this.servivoUsuario.obtenerUsuario(principal.getClaims());
             System.out.println(principal.getClaims());
-            model.addAttribute("usuario",usuario)
+            model.addAttribute("usuario",usuario);
         }
         return "index";
     }
