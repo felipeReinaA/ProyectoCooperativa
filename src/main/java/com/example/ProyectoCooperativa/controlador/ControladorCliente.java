@@ -2,12 +2,16 @@ package com.example.ProyectoCooperativa.controlador;
 
 import com.example.ProyectoCooperativa.entidades.Cliente;
 import com.example.ProyectoCooperativa.entidades.Usuario;
+import com.example.ProyectoCooperativa.servicios.ServicioCliente;
 import com.example.ProyectoCooperativa.servicios.ServicioImpCliente;
+import com.example.ProyectoCooperativa.servicios.ServicioUsu;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Map;
 
@@ -24,7 +28,6 @@ public class ControladorCliente {
     public ControladorCliente(ServivoUsuario servivoUsuario){
         this.servivoUsuario = servivoUsuario;
     }
-
 
     @GetMapping("/")
     public String inicio(Model model, @AuthenticationPrincipal OidcUser principal) {

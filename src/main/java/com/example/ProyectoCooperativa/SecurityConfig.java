@@ -1,4 +1,4 @@
-ackage com.example.ProyectoCooperativa;
+package com.example.ProyectoCooperativa;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -13,7 +13,6 @@ public class SecurityConfig {
         return http.oauth2Login()
                 .and().build();
     }
-
 
 }
 
